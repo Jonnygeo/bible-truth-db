@@ -1,95 +1,66 @@
-# Bible: XML and JSON
-Do you want to create a Bible based app? What about an API for Bible verses search? Now you can do this, using sources in your very own language! The main objective of this project is to allow people to create Bible related apps using XML and JSON. Do you like this idea? Help us to go even further. **Support this project! :)**
+# 📖 Bible Truth DB
 
-[![Donate](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=A9FM66AQT672L&lc=US&item_name=Bible%20Sources&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted)
+![License: Custom NeoLegacy](https://img.shields.io/badge/License-Custom%20NeoLegacy-red)
+![Built by JonnyG](https://img.shields.io/badge/Built%20by-JonnyG-blue)
+![Module](https://img.shields.io/badge/Module-Bible%20Dissection-purple)
+![Tech](https://img.shields.io/badge/Tech-JSON%2FSQLite%2FAI-orange)
 
-## How were the files built?
-The source files were generated using a Python based crawler. Therefore, these files may contain minor issues related to encoding and syntax.
+<p align="center">
+  <a href="https://neo-shade.com">
+    <img src="https://neo-shade.com/wp-content/uploads/2025/07/NeoLegacyBanner.jpg" height="180">
+  </a>
+</p>
 
-## Which languages and versions are covered by the project?
-#### Arabic
-* The Arabic Bible (ar_svd) 
+> **“This isn't your Sunday school scripture — it's a truth-seeking dissection.”**  
+> Bible Truth DB is the official spiritual database of the [NeoLegacy AI Platform](https://github.com/Jonnygeo/NeoLegacy), exposing distortions, revealing original meanings, and restoring the raw message of Yeshua.
 
-#### Chinese
-* Chinese Union Version (zh_cuv)
-* New Chinese Version (zh_ncv) 
+---
 
-#### German
-* Schlachter (de_schlachter)
+## 📜 What It Does
 
-#### Greek
-* Modern Greek (el_greek)
+- 🔍 Breaks down every book of the Bible by verse
+- 📛 Tags every line: divine, manipulated, misunderstood, added
+- 📂 Stores in modular JSON + SQLite format for AI queries
+- 📚 Summarizes key concepts and highlights historical mistranslations
+- 🧠 Powers truth-seeking tools, voice scripts, and short-form video generation
 
-#### English
-* Basic English (en_bbe)
-* King James Version (en_kjv) 
+---
 
-#### Esperanto
-* Esperanto (eo_esperanto)
+## ⚙️ Tech Stack
 
-#### Spanish
-* Reina Valera (es_rvr)
+- JSON structured files per book (e.g., `Book 01 - Genesis.json`)
+- SQLite DB for scalable truth indexing
+- Optional: API endpoints (Express.js or Python Flask)
+- AI integration-ready for querying spiritual insights
 
-#### Finnish
-* Finnish Bible (fi_finnish)
-* Pyhä Raamattu (fi_pr)
+---
+All raw files are in /books, structured as Book XX - [Title].json
 
-#### French
-* Le Bible de I'Épée (fr_apee)
+Optional: import SQLite DB using import.sql or truth.db
 
-#### Korean
-* Korean Version (ko_ko)
+🧩 Connected Modules
+Module	Role
+NeoLegacy	Frontend UI to explore dissected books
+neo-voice-core	Converts dissected summaries into speech
+truth-terminal-agent	Queries biblical truth with logic filters
+neo-video-archive	Hosts short-form dissection videos
 
-#### Portuguese
-* Almeida Revisada Imprensa Bíblica (pt_aa) 
-* Almeida Corrigida e Revisada Fiel (pt_acf) 
-* Nova Versão Internacional (pt_nvi) 
+🛡 LICENSE SUMMARY
+This module is protected under a Custom NeoLegacy License.
+Use permitted for non-commercial spiritual education and truth-seeking only.
+Do not rebrand, resell, or use in commercial SaaS without permission.
+See full LICENSE file for detailed terms.
 
-#### Romanian
-* Versiunea Dumitru Cornilescu (ro_cornilescu)
+🔗 Social & Community
+<p align="center"> <a href="https://x.com/neoshade2025"> <img src="https://img.shields.io/badge/X-Twitter-black?style=for-the-badge&logo=twitter&logoColor=white"> </a> <a href="https://youtube.com/@neoshade"> <img src="https://img.shields.io/badge/YouTube-Subscribe-red?style=for-the-badge&logo=youtube&logoColor=white"> </a> <a href="https://social.neo-shade.com"> <img src="https://img.shields.io/badge/NeoShade%20Social-Join-blueviolet?style=for-the-badge&logo=discourse&logoColor=white"> </a> </p>
+👤 Author
+JonnyG (aka JokerJonny)
+Truth Dissectionist • Digital Legacy Architect • Bible Hacker
+github.com/Jonnygeo
+## 🚀 Setup
 
-#### Russian
-* Синодальный перевод (ru_synodal)
+```bash
+git clone https://github.com/Jonnygeo/bible-truth-db.git
+cd bible-truth-db
+npm
 
-#### Vietnamese
-* Tiếng Việt (vi_vietnamese)
-
-## How the files are structured?
-### XML
-The XML files are encoded using UTF-8 and built in the following structure:
-```xml
-<book>
-  <chapter>
-    <verse>Texto</verse>
-  </chapter>
-</book>
-```
-
-### JSON
-The JSON files are also encoded using UTF-8 and built in the following structure:
-```javascript
-[
-	{
-	"abbrev" : "abbrev"
-	"book" : "name"
-	"chapters": 
-		[
-			["Verse 1", "Verse 2", "Verse 3", "..."],
-			["Verse 1", "Verse 2", "Verse 3", "..."],
-			["Verse 1", "Verse 2", "Verse 3", "..."]
-		]
-	}
-]
-```
-You can get the number of the chapter and verse using the array index.
-
-### What about the license and the copyrights?
-This project is distributed under the [Creative Commons BY-NC](https://creativecommons.org/licenses/by-nc/2.0/br/) license. All the Bible versions are property of their respective owners. All rights reserved to the owners.
-
-### How can I help the project?
-You can review the code, enhance the structures or work on new versions. Every help is welcome! :)
-
-### Can I donate to the project?
-Yes, you can! You can give a volunteer donation by [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=A9FM66AQT672L&lc=US&item_name=Bible%20Sources&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted).
-
-[![Donate](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=A9FM66AQT672L&lc=US&item_name=Bible%20Sources&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted)
